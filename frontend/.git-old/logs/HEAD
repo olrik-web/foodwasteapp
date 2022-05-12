@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 ff34f6a0d9f7a680889ba4d5b6c587389c3bece3 Marcus <molrik@outlook.com> 1651576589 +0200	commit (initial): First commit
+ff34f6a0d9f7a680889ba4d5b6c587389c3bece3 5ed313b7f7f924d32acb1d24f2d73ec2e8773448 Marcus <molrik@outlook.com> 1651580546 +0200	commit: Admin user
+5ed313b7f7f924d32acb1d24f2d73ec2e8773448 5ed313b7f7f924d32acb1d24f2d73ec2e8773448 Marcus <molrik@outlook.com> 1651581942 +0200	checkout: moving from master to marcus
+5ed313b7f7f924d32acb1d24f2d73ec2e8773448 993dacb71d4bc7e87122b8337f034ad0157f6fed Marcus <molrik@outlook.com> 1651764889 +0200	commit: Billeder til madkategori + en Details side
+993dacb71d4bc7e87122b8337f034ad0157f6fed 173a9fe1d07788232693d8414c9092880151ef6f Marcus <molrik@outlook.com> 1651821520 +0200	commit: Fjernede en kommentar på create page
+173a9fe1d07788232693d8414c9092880151ef6f b748d61782f60c7a1b507043beba37afd23b6aeb Marcus <molrik@outlook.com> 1651834807 +0200	commit: Filter, myPosts, DetailsPage
+b748d61782f60c7a1b507043beba37afd23b6aeb 5ed313b7f7f924d32acb1d24f2d73ec2e8773448 Marcus <molrik@outlook.com> 1651834853 +0200	checkout: moving from marcus to master
+5ed313b7f7f924d32acb1d24f2d73ec2e8773448 b748d61782f60c7a1b507043beba37afd23b6aeb Marcus <molrik@outlook.com> 1651834871 +0200	merge marcus: Fast-forward
+b748d61782f60c7a1b507043beba37afd23b6aeb 2598e226f224b1adff279f16d731ef7d459765cf Marcus <molrik@outlook.com> 1651836015 +0200	pull --tags origin master: Fast-forward
+2598e226f224b1adff279f16d731ef7d459765cf cd068761bbb961a86a6b4d23f8d380a8d1fc9738 Marcus <molrik@outlook.com> 1652100063 +0200	commit: Favorites
+cd068761bbb961a86a6b4d23f8d380a8d1fc9738 d6c7483bd32b8129a911ef7b3fe2079da76e8642 Marcus <molrik@outlook.com> 1652184877 +0200	commit: File upload
+d6c7483bd32b8129a911ef7b3fe2079da76e8642 b748d61782f60c7a1b507043beba37afd23b6aeb Marcus <molrik@outlook.com> 1652184899 +0200	checkout: moving from master to marcus
+b748d61782f60c7a1b507043beba37afd23b6aeb d6c7483bd32b8129a911ef7b3fe2079da76e8642 Marcus <molrik@outlook.com> 1652184905 +0200	merge master: Fast-forward
+d6c7483bd32b8129a911ef7b3fe2079da76e8642 d6c7483bd32b8129a911ef7b3fe2079da76e8642 Marcus <molrik@outlook.com> 1652341801 +0200	checkout: moving from marcus to master
