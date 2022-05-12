@@ -1,8 +1,0 @@
-0000000000000000000000000000000000000000 01b32072cdb77fe4f1db75b28da83873063a03f5 Marcus <molrik@outlook.com> 1651576677 +0200	commit (initial): First commit
-01b32072cdb77fe4f1db75b28da83873063a03f5 ed490e8ee8c3bbc02cca4cc6a059080eeee2d38e Marcus <molrik@outlook.com> 1651581875 +0200	commit: Admin
-ed490e8ee8c3bbc02cca4cc6a059080eeee2d38e 6e28f797d55a55e14d11def645876bc9ac87cbc0 Marcus <molrik@outlook.com> 1651834966 +0200	merge marcus: Fast-forward
-6e28f797d55a55e14d11def645876bc9ac87cbc0 e8228c44f6bd23152212484f44e2cc3f16688d4d Marcus <molrik@outlook.com> 1651837872 +0200	commit: gitignore for MySQL class tilføjet
-e8228c44f6bd23152212484f44e2cc3f16688d4d 137fedcbcb62a8e09e2bcf8efbe14bf427804991 Marcus <molrik@outlook.com> 1652100044 +0200	commit: Favorites
-137fedcbcb62a8e09e2bcf8efbe14bf427804991 8d276ea26ef00cd295d76a38586d59ca3b8b9f48 Marcus <molrik@outlook.com> 1652172104 +0200	commit: Posts Image upload
-8d276ea26ef00cd295d76a38586d59ca3b8b9f48 7daaeee3fe07d2a0855e1510ddd2a092a7e72e6f Marcus <molrik@outlook.com> 1652184848 +0200	commit: User upload image
-7daaeee3fe07d2a0855e1510ddd2a092a7e72e6f bfdcde37da16c7e305bf75b16369742599361128 Marcus <molrik@outlook.com> 1652341711 +0200	merge marcus: Fast-forward
