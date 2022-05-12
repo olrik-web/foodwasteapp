@@ -16,10 +16,13 @@ export default function SignUpPage({ setAuth }) {
 
         const newUser = { mail: mail, password: password, passwordCheck: passwordCheck, name: name };
         console.log(newUser);
-        const response = await fetch("http://localhost:3000/auth/?action=signup", {
+        const response = await fetch(
+          "http://localhost:3000/backend/auth/?action=signup",
+          {
             method: "POST",
-            body: JSON.stringify(newUser)
-        });
+            body: JSON.stringify(newUser),
+          }
+        );
 
         const data = await response.json();
         console.log(data);

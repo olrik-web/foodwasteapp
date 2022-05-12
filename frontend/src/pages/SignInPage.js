@@ -9,10 +9,13 @@ export default function SignInPage({ setAuth }) {
         const mail = event.target.mail.value; // mail value from inout field in sign in form
         const password = event.target.password.value; // password value from inout field in sign in form
         const loginObject = { mail: mail, password: password };
-        const response = await fetch("http://localhost:3000/auth/?action=login", {
+        const response = await fetch(
+          "http://localhost:3000/backend/auth/?action=login",
+          {
             method: "POST",
-            body: JSON.stringify(loginObject)
-        });
+            body: JSON.stringify(loginObject),
+          }
+        );
 
         const data = await response.json();
         if (data.error) {
