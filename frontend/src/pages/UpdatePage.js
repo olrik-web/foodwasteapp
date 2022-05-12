@@ -44,6 +44,8 @@ export default function UpdatePage() {
     }
   }
 
+  let readonly = "true";
+
   if (user.id === post.uid) {
     return (
       <section className="page">

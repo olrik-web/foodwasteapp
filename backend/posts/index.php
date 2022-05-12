@@ -22,7 +22,8 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
     $base64data = explode(",", $newPost->image);
     $imageData = base64_decode($base64data[1]);
     $source = imagecreatefromstring($imageData);
-    $savePath = $_SERVER["DOCUMENT_ROOT"] . "/../frontend/src/assets/img/";
+    $savePath = $_SERVER["DOCUMENT_ROOT"] . "/frontend/src/assets/img/";
+    error_log("Save path = " . $savePath);
     $fileName = date("Ymd_His_") . $newPost->title . ".jpg";
     $imageSave = imagejpeg($source, $savePath . $fileName);
     imagedestroy($source);

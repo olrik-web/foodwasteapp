@@ -25,7 +25,7 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
     $source = imagecreatefromstring($imageData);
 
     if (is_object($source) && $source instanceof \GdImage) {
-        $savePath = $_SERVER["DOCUMENT_ROOT"] . "/../frontend/src/assets/img/";
+        $savePath = $_SERVER["DOCUMENT_ROOT"] . "/frontend/src/assets/img/";
         $fileName = date("Ymd_His_") . $user->name . ".jpg";
         $imageSave = imagejpeg($source, $savePath . $fileName);
         imagedestroy($source);

@@ -570,13 +570,21 @@ VALUES
 
 CREATE TABLE `favorites` (
 	`id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
-	`postid` int NOT NULL COMMENT 'Primary Key',
+	`postid` int NOT NULL COMMENT 'post id',
 	`uid` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'user id',
 	PRIMARY KEY (`id`)
 );
-
-
 INSERT INTO `favorites`(postid, uid) VALUES (14, 13);
+
+CREATE TABLE `orders` (
+    `id` int NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+	`buyerId` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'buyer id',
+	`sellerId` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'seller id',
+    `postId` int NOT NULL COMMENT 'post id',
+	`amount` int NOT NULL COMMENT 'amount', 
+	`created_at` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'created at time',
+    PRIMARY KEY (`id`)
+);
 
 
 ;

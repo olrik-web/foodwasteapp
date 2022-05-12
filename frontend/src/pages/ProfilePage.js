@@ -10,7 +10,7 @@ export default function ProfilePage({ setAuth }) {
   const navigate = useNavigate();
   let image;
   // User image varchar(255) + date("Ymd_His_") = 271
-  if (user.image.length < 280) {
+  if (user.image != null && user.image.length < 280) {
     image = require(`../assets/img/${user.image}`);
   }
 

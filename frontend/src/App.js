@@ -9,28 +9,29 @@ import SignUpPage from "./pages/SignUpPage";
 import ProfilePage from "./pages/ProfilePage";
 import DetailsPage from "./pages/DetailsPage";
 import MyPosts from "./pages/MyPosts";
+import OrderPage from "./pages/OrderPage";
 import FavoritePage from "./pages/FavoritePage";
-
 
 export default function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth")); // default value comes from localStorage
 
-    // variable holding all private routes including the nav bar
-    const privateRoutes = (
-        <>
-            <Nav />
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/create" element={<CreatePage />} />
-                 <Route path="/details/:postId" element={<DetailsPage />} />
-                <Route path="/update/:postId" element={<UpdatePage />} />
-                <Route path="/profile" element={<ProfilePage setAuth={setIsAuth} />} />
-                <Route path="/favorite" element={<FavoritePage/>} />
-                <Route path="/myPosts" element={<MyPosts/>} />
-                <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-        </>
-    );
+  // variable holding all private routes including the nav bar
+  const privateRoutes = (
+    <>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/create" element={<CreatePage />} />
+        <Route path="/details/:postId" element={<DetailsPage />} />
+        <Route path="/update/:postId" element={<UpdatePage />} />
+        <Route path="/orders/:buyerId" element={<OrderPage />} />
+        <Route path="/profile" element={<ProfilePage setAuth={setIsAuth} />} />
+        <Route path="/favorite" element={<FavoritePage />} />
+        <Route path="/myPosts" element={<MyPosts />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </>
+  );
 
   // variable holding all public routes without nav bar
   const publicRoutes = (
