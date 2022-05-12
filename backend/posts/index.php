@@ -36,9 +36,9 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
 } else if ($request_method === 'DELETE' && isset($_GET['id'])) {
     $postId = $_GET['id'];
     $sql = "DELETE FROM POSTS WHERE id = '$postId'";
-    // $sqlFavorites = "DELETE FROM favorites WHERE postid = '$postId'";
+    $sqlFavorites = "DELETE FROM favorites WHERE postid = '$postId'";
     echo $mySQL->Query($sql, false);
-    // echo $mySQL->Query($sqlFavorites, false);
+    echo $mySQL->Query($sqlFavorites, false);
 
 } else if ($request_method === 'PUT' && isset($_GET['id'])) {
     $postId = $_GET['id'];
