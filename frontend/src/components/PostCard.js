@@ -1,7 +1,11 @@
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import { faClock, faHeart, faTimesCircle } from "@fortawesome/free-regular-svg-icons";
 import {
+  faBagShopping,
+  faCoins,
   faHeartBroken,
   faHeartCircleCheck,
+  faTag,
+  faTruckPickup,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
@@ -74,7 +78,39 @@ export default function PostCard({ post }) {
       <div className="detailsContainer">
         <div>
           <UserAvatar uid={post.uid} />
-          <img src={image} alt={post.title} />
+          <img src={image} alt={post.title}/>
+
+
+          <div className="priceQty">
+          {post.quantity > 4 ? (
+        <p id="quantity"> quantity {post.quantity}</p> 
+      ) : post.quantity <= 4 && post.quantity > 0 ? (
+         <p id="quantity" style={{color:"red" , border:"2px solid red"}}> Only {post.quantity} left </p>
+      ): (<p id="quantity" style={{color:"white" , background:"#808080", border:"none"}}> Udsolgt</p>)}
+            <p className="price">{post.price} DKK</p> 
+          
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {/* {post.quantity > 4 ? (
+        <p id="quantity"> quantity {post.quantity}</p> 
+      ) : (
+         <p id="quantity" style={{color:"red" , border:"2px solid red"}}> Only {post.quantity} left </p>
+      )} */}
+ 
           <h2>{post.title}</h2>
           <p>{post.body}</p>
         </div>
@@ -91,9 +127,18 @@ export default function PostCard({ post }) {
             {isFavorite ? (
               <FontAwesomeIcon icon={faHeartCircleCheck} />
             ) : (
-              <FontAwesomeIcon icon={faHeart} />
+              <FontAwesomeIcon icon={faHeart}/>
             )}
           </a>
+        </div>
+        <div className="postDetails">
+
+
+            <p><FontAwesomeIcon icon={faTag} style={{color:"#f5a33e"}}/> {post.category}</p> 
+            <p><FontAwesomeIcon icon={faBagShopping} style={{color:"#f5a33e"}}/> {post.pickup_at}</p> 
+            
+     
+
         </div>
         {/* <div className="buttonsRight"></div> */}
       </div>

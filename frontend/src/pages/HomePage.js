@@ -23,8 +23,8 @@ export default function HomePage() {
   return (
     <section className="page">
       <label>
-        Category:
-        <select value={value} onChange={handleChange}>
+        Category: &nbsp;
+        <select value={value} onChange={handleChange}  className="selectHome">
           <option value="all">All</option>
           <option value="meals">Meals</option>
           <option value="bakery">Bakery</option>
@@ -32,7 +32,10 @@ export default function HomePage() {
           <option value="dairy">Dairy</option>
           <option value="meat">Meat</option>
         </select>
+        <br/>
       </label>
+
+        <br/>
 
       <section className="grid-container">
         {posts.map((post) => {

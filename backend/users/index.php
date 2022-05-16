@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 header("Content-Type: application/json; charset=UTF-8");
-include_once("../classes/MySQL.php");
+include_once "../classes/MySQL.php";
 
 $request_method = $_SERVER['REQUEST_METHOD'];
 $mySQL = new MySQL(true);
@@ -29,11 +29,11 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
         $fileName = date("Ymd_His_") . $user->name . ".jpg";
         $imageSave = imagejpeg($source, $savePath . $fileName);
         imagedestroy($source);
-        $sql = "UPDATE users 
+        $sql = "UPDATE users
                 SET name = '$user->name', image = '$fileName', mail = '$user->mail', phone = '$user->phone', street = '$user->street', zipcode = '$user->zipcode', city = '$user->city'
                 WHERE id = '$userId'";
     } else {
-        $sql = "UPDATE users 
+        $sql = "UPDATE users
                 SET name = '$user->name', mail = '$user->mail', phone = '$user->phone', street = '$user->street', zipcode = '$user->zipcode', city = '$user->city'
                 WHERE id = '$userId'";
     }

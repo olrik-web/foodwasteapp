@@ -13,7 +13,11 @@ export default function CreatePage() {
             method: "POST",
             body: JSON.stringify(newPost)
         });
+
+        console.log(response);
         navigate("/");
+
+      
     }
 
     return (

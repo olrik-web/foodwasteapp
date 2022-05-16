@@ -56,31 +56,45 @@ export default function UpdatePage() {
       <div className="detailsImg">
         <img className="detailsImage" src={image} alt={post.title} />
       </div>
+
+      
       <div className="detailsPage">
+        <br/>
         <div className="detailsUser">
           <UserAvatar uid={post.uid} />
         </div>
         <h1 className="text-center">{post.title}</h1>
-        <p>{post.body}</p>
-        {user.admin === "1" && user.id === post.uid && (
-          <button onClick={handleClick}>Edit/delete post</button>
-        )}
-        <div>
+        <p className="detailPostBody">{post.body}</p>
+        <div className="buySection">
+
+          <div className="buyButtons">
           <button
             className="postButtons"
             onClick={() => {
               if (amount > 0) setAmount(amount - 1);
-            }}
+            }} style={{width:"90px"}}
           >
             -
           </button>
-          <p className="postButtons">{amount}</p>
+          &nbsp;
+         
+          <p className="postButtons" id="amountSection">{amount}</p>
+          
           {/* TODO: if(amount < post.amount) setAmount+1 */}
-          <button className="postButtons" onClick={() => setAmount(amount + 1)}>
+          &nbsp;
+          <button className="postButtons" onClick={() => setAmount(amount + 1)} style={{width:"90px"}}>
             +
           </button>
-          <button onClick={createOrder}>Order</button>
+          
+          {/* <button className="postButtons" onClick={createOrder}>Order</button> */}
         </div>
+         <button className="orderButton" onClick={createOrder}>Order</button>
+        </div>
+
+        {user.admin === "1" && user.id === post.uid && (
+          <button onClick={handleClick}>Edit/delete post</button>
+        )}
+        
       </div>
     </section>
   );

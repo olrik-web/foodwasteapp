@@ -3,10 +3,10 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 header("Content-Type: application/json; charset=UTF-8");
-include_once("../classes/MySQL.php");
+include_once "../classes/MySQL.php";
 
 $request_method = $_SERVER['REQUEST_METHOD'];
-$mySQL = new MySQL(true);
+$mySQL = new MYSQL(true);
 
 if ($request_method === 'GET' && isset($_GET['id'])) {
     $postId = $_GET['id'];
@@ -17,6 +17,8 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
     echo $mySQL->Query($sql, true);
 } else if ($request_method === 'POST') {
     $newPost = json_decode(file_get_contents('php://input'));
+
+    error_log($newPost->title);
 
     // File upload
     $base64data = explode(",", $newPost->image);
@@ -29,9 +31,9 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
     imagedestroy($source);
 
     $sql = "INSERT INTO posts
-                    (title, body, image, uid)
+                    (title, body, pickup_at, quantity, price, image, category, uid)
                 VALUES
-                    ('$newPost->title', '$newPost->body', '$fileName', '$newPost->uid')
+                    ('$newPost->title', '$newPost->body', '$newPost->pickup' , '$newPost->quantity', '$newPost->price', '$fileName', '$newPost->category' , '$newPost->uid')
                 ";
     echo $mySQL->Query($sql, false);
 } else if ($request_method === 'DELETE' && isset($_GET['id'])) {
@@ -44,8 +46,8 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
 } else if ($request_method === 'PUT' && isset($_GET['id'])) {
     $postId = $_GET['id'];
     $post = json_decode(file_get_contents('php://input'));
-    $sql = "UPDATE posts 
-                SET title = '$post->title', body = '$post->body', image = '$post->image'
+    $sql = "UPDATE posts
+                SET title = '$post->title', body = '$post->body', pickup_at = '$newPost->pickup' , quantity =  '$newPost->quantity', price = '$newPost->price',  image = '$post->image' , category = '$newPost->category'
                 WHERE id = '$postId'";
     echo $mySQL->Query($sql, false);
 }

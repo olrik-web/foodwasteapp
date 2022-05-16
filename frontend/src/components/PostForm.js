@@ -4,7 +4,11 @@ import imgPlaceholder from "../assets/img/img-placeholder.jpg";
 export default function PostForm({savePost, post }) {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const [pickup,setPickup] = useState("");
+  const [quantity,setQuantity] = useState("");
+   const [price,setPrice] = useState("");
   const [image, setImage] = useState("");
+  const [category,Setcategory] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
@@ -13,7 +17,12 @@ export default function PostForm({savePost, post }) {
       // The post object is a prop, passed from UpdatePage
       setTitle(post.title);
       setBody(post.body);
+      setPickup(post.pickup);
+      setQuantity(post.quantity);
+      setPrice(post.price);
+
       setImage(post.image);
+      Setcategory(post.category);
     }
   }, [post]); // useEffect is called every time post changes.
 
@@ -46,9 +55,13 @@ export default function PostForm({savePost, post }) {
       title: title,
       image: image,
       body: body,
+      pickup:pickup,
+      quantity:quantity,
+      price:price,
+      category:category
     };
 
-    const validForm = formData.title && formData.body && formData.image; // will return false if one of the properties doesn't have a value
+    const validForm = formData.title && formData.body && formData.pickup && formData.quantity && formData.price && formData.image && formData.category; // will return false if one of the properties doesn't have a value
     if (validForm) {
       // if all fields/ properties are filled, then call savePost
       savePost(formData);
@@ -61,7 +74,7 @@ export default function PostForm({savePost, post }) {
   const [value, setValue] = useState("meals");
 
   const handleChange = (event) => {
-    setValue(event.target.value);
+    Setcategory(event.target.value);
   };
 
   return (
@@ -85,8 +98,34 @@ export default function PostForm({savePost, post }) {
         />
       </label>
       <label>
-        Category:
-        <select value={value} onChange={handleChange}>
+        Pickup at
+        <input
+          type="dateTime-local"
+          value={pickup || ""}
+          onChange={(e) => setPickup(e.target.value)}
+        />
+      </label>
+      <label>
+        Quantity
+        <input
+          type="number" min="1" max="100"
+          value={quantity || ""}
+           placeholder="Quantity (Max 100)"
+          onChange={(e) => setQuantity(e.target.value)}
+        />
+      </label>
+      <label>
+        Price DKK
+        <input
+          type="number" min="1" max=""
+          value={price || ""}
+           placeholder="DKK 200"
+          onChange={(e) => setPrice(e.target.value)}
+        />
+      </label>
+      <label>
+        Category &nbsp; <br/>
+        <select value={value} onChange={handleChange} className="selectPost">
           <option value="meals">Meals</option>
           <option value="bakery">Bakery</option>
           <option value="vegetables">Vegetables</option>
@@ -95,6 +134,7 @@ export default function PostForm({savePost, post }) {
         </select>
       </label>
       <label>
+        <br/> <br/>
         Image
         <input
           type="file"
