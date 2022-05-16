@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import imgPlaceholder from "../assets/img/img-placeholder.jpg";
 import { useNavigate } from "react-router-dom";
+import Modal from "../components/Modal";
 
 export default function ProfilePage({ setAuth }) {
   const [errorMessage, setErrorMessage] = useState("");
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("authUser"))
   );
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   let image;
   // User image varchar(255) + date("Ymd_His_") = 271
@@ -44,6 +46,7 @@ export default function ProfilePage({ setAuth }) {
 
     if (responseObject.status === "success") {
       localStorage.setItem("authUser", JSON.stringify(responseObject.data[0]));
+      setShow(true);
     }
   }
 
@@ -82,6 +85,16 @@ export default function ProfilePage({ setAuth }) {
 
   return (
     <section className="page">
+      <Modal
+        title="Profil opdateret"
+        onClose={() => {
+          setShow(false);
+          navigate("/");
+        }}
+        show={show}
+      >
+        <p>This is a modal</p>
+      </Modal>
       <h1 className="text-center">Profile</h1>
       <form onSubmit={handleSubmit}>
         <label>
