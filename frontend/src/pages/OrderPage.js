@@ -18,10 +18,11 @@ export default function MyPosts() {
 
   return (
     <section className="page">
+      <h1 className="text-center">Orders</h1>
       <section className="grid-container">
         {orders.map((order) => {
           if (order.buyerId === user.id) {
-            return <OrderItem order={order} key={order.id}/>;
+            return <OrderItem order={order} key={order.id} />;
           }
         })}
       </section>

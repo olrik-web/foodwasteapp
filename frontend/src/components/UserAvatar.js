@@ -27,6 +27,7 @@ export default function UserAvatar({ uid }) {
       <span>
         <h3>{user.name}</h3>
         <p>{user.street}</p>
+        <p>{user.zipcode} {user.city}</p>
       </span>
     </div>
   );

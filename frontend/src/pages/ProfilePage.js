@@ -86,14 +86,14 @@ export default function ProfilePage({ setAuth }) {
   return (
     <section className="page">
       <Modal
-        title="Profil opdateret"
+        title="Update success"
         onClose={() => {
           setShow(false);
           navigate("/");
         }}
         show={show}
       >
-        <p>This is a modal</p>
+        <p>Profile has been updated successfully.</p>
       </Modal>
       <h1 className="text-center">Profile</h1>
       <form onSubmit={handleSubmit}>

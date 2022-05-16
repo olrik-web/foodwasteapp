@@ -105,8 +105,8 @@ VALUES
         '2022-04-29 21:30:00',
         4,
         100,
-        'bakery.jpg',
-        'bakery',
+        'Bakery.jpg',
+        'Bakery',
         '1'
     ),(
         14,
@@ -116,8 +116,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         45,
-        'dairy.jpg',
-        'dairy',
+        'Dairy.jpg',
+        'Dairy',
         '1'
     ),(
         15,
@@ -127,8 +127,8 @@ VALUES
         '2022-04-29 14:30:00',
         3,
         89,
-        'meals.jpg',
-        'meals',
+        'Meals.jpg',
+        'Meals',
         '2'
     ),(
         16,
@@ -138,8 +138,8 @@ VALUES
         '2022-04-29 15:30:00',
         6,
         89,
-        'vegetables.jpg',
-        'vegetables',
+        'Vegetables.jpg',
+        'Vegetables',
         '2'
     ),(
         17,
@@ -149,8 +149,8 @@ VALUES
         '2022-04-29 19:30:00',
         20,
         89,
-        'meat.jpg',
-        'meat',
+        'Meat.jpg',
+        'Meat',
         '3'
     ),(
         18,
@@ -160,8 +160,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'bakery.jpg',
-        'bakery',
+        'Bakery.jpg',
+        'Bakery',
         '3'
     ),(
         19,
@@ -171,8 +171,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'bakery.jpg',
-        'bakery',
+        'Bakery.jpg',
+        'Bakery',
         '4'
     ),(
         20,
@@ -182,8 +182,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'vegetables.jpg',
-        'vegetables',
+        'Vegetables.jpg',
+        'Vegetables',
         '5'
     ),(
         21,
@@ -193,8 +193,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meals.jpg',
-        'meals',
+        'Meals.jpg',
+        'Meals',
         '6'
     ),(
         22,
@@ -204,8 +204,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meals.jpg',
-        'meals',
+        'Meals.jpg',
+        'Meals',
         '6'
     ),(
         23,
@@ -215,8 +215,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'vegetables.jpg',
-        'vegetables',
+        'Vegetables.jpg',
+        'Vegetables',
         '7'
     ),(
         24,
@@ -226,8 +226,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'bakery.jpg',
-        'bakery',
+        'Bakery.jpg',
+        'Bakery',
         '4'
     ),(
         25,
@@ -237,8 +237,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'dairy.jpg',
-        'dairy',
+        'Dairy.jpg',
+        'Dairy',
         '8'
     ),(
         26,
@@ -248,8 +248,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'dairy.jpg',
-        'dairy',
+        'Dairy.jpg',
+        'Dairy',
         '8'
     ),(
         28,
@@ -259,8 +259,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meat.jpg',
-        'meat',
+        'Meat.jpg',
+        'Meat',
         '9'
     ),(
         29,
@@ -270,8 +270,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meat.jpg',
-        'meat',
+        'Meat.jpg',
+        'Meat',
         '2'
     ),(
         30,
@@ -281,8 +281,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meals.jpg',
-        'meals',
+        'Meals.jpg',
+        'Meals',
         '12'
     ),(
         31,
@@ -292,8 +292,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meals.jpg',
-        'meals',
+        'Meals.jpg',
+        'Meals',
         '11'
     ),(
         32,
@@ -303,8 +303,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meals.jpg',
-        'meals',
+        'Meals.jpg',
+        'Meals',
         '2'
     ),(
         33,
@@ -314,8 +314,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'bakery.jpg',
-        'bakery',
+        'Bakery.jpg',
+        'Bakery',
         '2'
     ),(
         34,
@@ -325,8 +325,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meat.jpg',
-        'meat',
+        'Meat.jpg',
+        'Meat',
         '4'
     ),(
         35,
@@ -336,8 +336,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'vegetables.jpg',
-        'vegetables',
+        'Vegetables.jpg',
+        'Vegetables',
         '3'
     ),(
         36,
@@ -347,8 +347,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'bakery.jpg',
-        'bakery',
+        'Bakery.jpg',
+        'Bakery',
         '11'
     ),(
         37,
@@ -358,8 +358,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'dairy.jpg',
-        'dairy',
+        'Dairy.jpg',
+        'Dairy',
         '2'
     ),(
         38,
@@ -369,8 +369,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'vegetables.jpg',
-        'vegetables',
+        'Vegetables.jpg',
+        'Vegetables',
         '2'
     ),(
         39,
@@ -380,8 +380,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'dairy.jpg',
-        'dairy',
+        'Dairy.jpg',
+        'Dairy',
         '3'
     ),(
         40,
@@ -391,8 +391,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'meals.jpg',
-        'meals',
+        'Meals.jpg',
+        'Meals',
         '6'
     ),(
         41,
@@ -402,8 +402,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'vegetables.jpg',
-        'vegetables',
+        'Vegetables.jpg',
+        'Vegetables',
         '10'
     ),(
         42,
@@ -413,8 +413,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'bakery.jpg',
-        'bakery',
+        'Bakery.jpg',
+        'Bakery',
         '12'
     ),(
         43,
@@ -424,8 +424,8 @@ VALUES
         '2022-04-29 20:30:00',
         2,
         89,
-        'dairy.jpg',
-        'dairy',
+        'Dairy.jpg',
+        'Dairy',
         '12'
     );
 

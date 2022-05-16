@@ -19,12 +19,13 @@ export default function MyPosts() {
 
   return (
     <section className="page">
+      <h1 className="text-center">My Posts</h1>
       <section className="grid-container">
-          {posts.map(post => {
-              if (post.uid === user.id) {
-                  return <PostCard post={post} key={post.id} />;
-              }
-          })}
+        {posts.map((post) => {
+          if (post.uid === user.id) {
+            return <PostCard post={post} key={post.id} />;
+          }
+        })}
       </section>
     </section>
   );

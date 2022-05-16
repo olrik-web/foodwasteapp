@@ -14,7 +14,7 @@ export default function HomePage() {
     getPosts();
   }, []);
 
-  const [value, setValue] = useState("all");
+  const [value, setValue] = useState("All");
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -25,12 +25,12 @@ export default function HomePage() {
       <label>
         Category: &nbsp;
         <select value={value} onChange={handleChange}  className="selectHome">
-          <option value="all">All</option>
-          <option value="meals">Meals</option>
-          <option value="bakery">Bakery</option>
-          <option value="vegetables">Vegetables</option>
-          <option value="dairy">Dairy</option>
-          <option value="meat">Meat</option>
+          <option value="All">All</option>
+          <option value="Meals">Meals</option>
+          <option value="Bakery">Bakery</option>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Meat">Meat</option>
         </select>
         <br/>
       </label>
@@ -39,7 +39,7 @@ export default function HomePage() {
 
       <section className="grid-container">
         {posts.map((post) => {
-          if (value != "all") {
+          if (value != "All") {
             if (post.category === value) {
               return <PostCard post={post} key={post.id} />;
             }

@@ -30,6 +30,7 @@ export default function HomePage() {
 
   return (
     <section className="page">
+      <h1 className="text-center">Favorites</h1>
       <section className="grid-container">
         {favorites.map((favorite) => {
           return posts.map((post) => {

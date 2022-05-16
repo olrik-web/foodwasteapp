@@ -37,11 +37,12 @@ export default function OrderItem({ order }) {
         <div className="detailsContainer">
           <div>
             <UserAvatar uid={post.uid} />
-            {/* <img src={image} alt={post.title} /> */}
             <h2>{post.title}</h2>
             <p>{post.body}</p>
-            <p>{order.amount}</p>
-            <p>{order.created_at}</p>
+            <hr/>
+            <p>Amount: {order.amount}</p>
+            <p>Pickup time: {post.pickup_at}</p>
+            <p>Order date: {order.created_at}</p>
           </div>
         </div>
       </article>

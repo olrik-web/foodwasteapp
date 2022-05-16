@@ -8,7 +8,7 @@ export default function PostForm({savePost, post }) {
   const [quantity,setQuantity] = useState("");
    const [price,setPrice] = useState("");
   const [image, setImage] = useState("");
-  const [category,Setcategory] = useState("");
+  const [category,setCategory] = useState("Meals");
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
@@ -20,9 +20,8 @@ export default function PostForm({savePost, post }) {
       setPickup(post.pickup);
       setQuantity(post.quantity);
       setPrice(post.price);
-
       setImage(post.image);
-      Setcategory(post.category);
+      setCategory(post.category);
     }
   }, [post]); // useEffect is called every time post changes.
 
@@ -61,7 +60,7 @@ export default function PostForm({savePost, post }) {
       category:category
     };
 
-    const validForm = formData.title && formData.body && formData.pickup && formData.quantity && formData.price && formData.image && formData.category; // will return false if one of the properties doesn't have a value
+    const validForm = formData.title && formData.body && formData.pickup && formData.quantity && formData.price && formData.category; // will return false if one of the properties doesn't have a value
     if (validForm) {
       // if all fields/ properties are filled, then call savePost
       savePost(formData);
@@ -71,10 +70,8 @@ export default function PostForm({savePost, post }) {
     }
   }
 
-  const [value, setValue] = useState("meals");
-
   const handleChange = (event) => {
-    Setcategory(event.target.value);
+    setCategory(event.target.value);
   };
 
   return (
@@ -125,12 +122,12 @@ export default function PostForm({savePost, post }) {
       </label>
       <label>
         Category &nbsp; <br/>
-        <select value={value} onChange={handleChange} className="selectPost">
-          <option value="meals">Meals</option>
-          <option value="bakery">Bakery</option>
-          <option value="vegetables">Vegetables</option>
-          <option value="dairy">Dairy</option>
-          <option value="meat">Meat</option>
+        <select value={category} onChange={handleChange} className="selectPost">
+          <option value="Meals">Meals</option>
+          <option value="Bakery">Bakery</option>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Meat">Meat</option>
         </select>
       </label>
       <label>

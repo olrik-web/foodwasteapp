@@ -17,18 +17,19 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
     echo $mySQL->Query($sql, true);
 } else if ($request_method === 'POST') {
     $newPost = json_decode(file_get_contents('php://input'));
-
-    error_log($newPost->title);
-
-    // File upload
-    $base64data = explode(",", $newPost->image);
-    $imageData = base64_decode($base64data[1]);
-    $source = imagecreatefromstring($imageData);
-    $savePath = $_SERVER["DOCUMENT_ROOT"] . "/frontend/src/assets/img/";
-    error_log("Save path = " . $savePath);
-    $fileName = date("Ymd_His_") . $newPost->title . ".jpg";
-    $imageSave = imagejpeg($source, $savePath . $fileName);
-    imagedestroy($source);
+    if (empty($newPost->image)) {
+        // default image using post category
+        $fileName = $newPost->category . ".jpg";
+    } else {
+        // File upload
+        $base64data = explode(",", $newPost->image);
+        $imageData = base64_decode($base64data[1]);
+        $source = imagecreatefromstring($imageData);
+        $savePath = $_SERVER["DOCUMENT_ROOT"] . "/frontend/src/assets/img/";
+        $fileName = date("Ymd_His_") . $newPost->title . ".jpg";
+        $imageSave = imagejpeg($source, $savePath . $fileName);
+        imagedestroy($source);
+    }
 
     $sql = "INSERT INTO posts
                     (title, body, pickup_at, quantity, price, image, category, uid)
@@ -42,7 +43,6 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
     $sqlFavorites = "DELETE FROM favorites WHERE postid = '$postId'";
     echo $mySQL->Query($sql, false);
     echo $mySQL->Query($sqlFavorites, false);
-
 } else if ($request_method === 'PUT' && isset($_GET['id'])) {
     $postId = $_GET['id'];
     $post = json_decode(file_get_contents('php://input'));
