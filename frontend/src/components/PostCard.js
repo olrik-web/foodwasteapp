@@ -11,7 +11,6 @@ import UserAvatar from "./UserAvatar";
 
 export default function PostCard({ post }) {
   const navigate = useNavigate();
-  const image = require(`../assets/img/${post.image}`);
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("authUser"))
   );
@@ -28,7 +27,7 @@ export default function PostCard({ post }) {
 
   useEffect(() => {
     async function getFavorites() {
-      const url = `http://localhost:3000/backend/favorites?uid=${user.id}`;
+      const url = `http://foodwasteapi.marcusolrik.dk/favorites?uid=${user.id}`;
       const response = await fetch(url);
       const responseData = await response.json();
       setFavorites(responseData.data);
@@ -43,7 +42,7 @@ export default function PostCard({ post }) {
       postid: post.id,
       uid: user.id,
     };
-    const url = "http://localhost:3000/backend/favorites";
+    const url = "http://foodwasteapi.marcusolrik.dk/favorites";
     await fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
@@ -51,7 +50,7 @@ export default function PostCard({ post }) {
   }
 
   async function favoriteDelete(post) {
-    const url = `http://localhost:3000/backend/favorites?postid=${post.id}`;
+    const url = `http://foodwasteapi.marcusolrik.dk/favorites?postid=${post.id}`;
     await fetch(url, {
       method: "DELETE",
     });
@@ -67,13 +66,17 @@ export default function PostCard({ post }) {
     }
     setFavorite((current) => !current);
   };
+  const value = process.env.PUBLIC_URL;
+  const value2 = process.env["PUBLIC_URL"];
+  // console.log(value);
+  // console.log(value2);
 
   return (
     <article onClick={handleClick}>
       <div className="detailsContainer">
         <div>
           <UserAvatar uid={post.uid} />
-          <img src={image} alt={post.title} />
+          <img src={require(`../assets/img/${post.image}`)} alt={post.title} />
           <div className="priceQty">
             {post.quantity > 4 ? (
               <p id="quantity"> Quantity: {post.quantity}</p>

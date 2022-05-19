@@ -76,7 +76,9 @@ CREATE TABLE `posts` (
     `category` VARCHAR(255) DEFAULT NULL COMMENT 'category',
     `uid` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL COMMENT 'user id',
     PRIMARY KEY (`id`)
-) ENGINE = InnoDB AUTO_INCREMENT = 52 DEFAULT CHARSET = utf8mb3 COMMENT = 'newTable';
+);
+
+-- ENGINE = InnoDB AUTO_INCREMENT = 52 DEFAULT CHARSET = utf8mb3 COMMENT = 'newTable';
 
 /*!40101 SET character_set_client = @saved_cs_client */
 

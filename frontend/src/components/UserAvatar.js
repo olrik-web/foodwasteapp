@@ -6,7 +6,7 @@ export default function UserAvatar({ uid }) {
     name: "User's Name",
     street: "User's Street",
   });
-  const url = `http://localhost:3000/backend/users/?id=${uid}`;
+  const url = `http://foodwasteapi.marcusolrik.dk/users/?id=${uid}`;
 
   let image = "";
   useEffect(() => {

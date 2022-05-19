@@ -8,7 +8,7 @@ export default function MyPosts() {
   const params = useParams();
   useEffect(() => {
     async function getOrders() {
-      const url = `http://localhost:3000/backend/orders?buyerId=${params.buyerId}`;
+      const url = `http://foodwasteapi.marcusolrik.dk/orders?buyerId=${params.buyerId}`;
       const response = await fetch(url);
       const responseData = await response.json();
       setOrders(responseData.data);

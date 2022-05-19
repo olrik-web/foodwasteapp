@@ -10,7 +10,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getFavorites() {
-      const url = `http://localhost:3000/backend/favorites?uid=${user.id}`;
+      const url = `http://foodwasteapi.marcusolrik.dk/favorites?uid=${user.id}`;
       const response = await fetch(url);
       const responseData = await response.json();
       setFavorites(responseData.data);
@@ -20,7 +20,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getPosts() {
-      const url = "http://localhost:3000/backend/posts/";
+      const url = "http://foodwasteapi.marcusolrik.dk/posts/";
       const response = await fetch(url);
       const responseData = await response.json();
       setPosts(responseData.data);

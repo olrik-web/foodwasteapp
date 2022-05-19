@@ -9,7 +9,7 @@ export default function MyPosts() {
 
   useEffect(() => {
     async function getPosts() {
-      const url = "http://localhost:3000/backend/posts/";
+      const url = "http://foodwasteapi.marcusolrik.dk/posts/";
       const response = await fetch(url);
       const responseData = await response.json();
       setPosts(responseData.data);

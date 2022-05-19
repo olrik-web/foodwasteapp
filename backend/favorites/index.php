@@ -1,9 +1,9 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: http://foodwaste.marcusolrik.dk/");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 header("Content-Type: application/json; charset=UTF-8");
-include_once("../classes/MySQL.php");
+include_once "../classes/MySQL.php";
 
 $request_method = $_SERVER['REQUEST_METHOD'];
 $mySQL = new MySQL(true);

@@ -5,4 +5,6 @@
     echo "<h3>JSON API Running at $url</h3>";
     echo "<p><a href='$url/posts'>Posts</a></p>";
     echo "<p><a href='$url/users'>Users</a></p>";
+    echo "<p><a href='$url/orders'>Orders</a></p>";
+    echo "<p><a href='$url/favorites'>Favorites</a></p>";
 ?>

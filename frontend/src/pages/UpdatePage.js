@@ -9,7 +9,7 @@ export default function UpdatePage() {
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("authUser"))
   );
-  const url = `http://localhost:3000/backend/posts/?id=${params.postId}`;
+  const url = `http://foodwasteapi.marcusolrik.dk/posts/?id=${params.postId}`;
 
   useEffect(() => {
     async function getPost() {

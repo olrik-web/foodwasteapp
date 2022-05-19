@@ -4,6 +4,7 @@ header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: *");
 header("Content-Type: application/json; charset=UTF-8");
 include_once "../classes/MySQL.php";
+include_once "../logger/Logger.php";
 
 $request_method = $_SERVER['REQUEST_METHOD'];
 $mySQL = new MYSQL(true);
@@ -25,7 +26,10 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
         $base64data = explode(",", $newPost->image);
         $imageData = base64_decode($base64data[1]);
         $source = imagecreatefromstring($imageData);
-        $savePath = $_SERVER["DOCUMENT_ROOT"] . "/frontend/src/assets/img/";
+        // Use the following savePath for localhost
+        // $savePath = $_SERVER["DOCUMENT_ROOT"] . "/frontend/src/assets/img/";
+        // Use this path for marcusolrik.dk Simply hosted website
+        $savePath = "/var/www/marcusolrik.dk/foodwaste/static/media/";
         $fileName = date("Ymd_His_") . $newPost->title . ".jpg";
         $imageSave = imagejpeg($source, $savePath . $fileName);
         imagedestroy($source);
