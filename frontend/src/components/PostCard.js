@@ -91,7 +91,7 @@ export default function PostCard({ post }) {
                 style={{
                   color: "white",
                   background: "#808080",
-                  border: "none",
+                  border: "2px solid #808080",
                 }}
               >
                 {" "}
