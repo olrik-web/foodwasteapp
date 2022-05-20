@@ -28,7 +28,13 @@ export default function PostCard({ post }) {
   useEffect(() => {
     async function getFavorites() {
       const url = `http://foodwasteapi.marcusolrik.dk/favorites?uid=${user.id}`;
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        headers: {
+          // "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
       const responseData = await response.json();
       setFavorites(responseData.data);
       const result = responseData.data.find((item) => item.postid === post.id);
