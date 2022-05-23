@@ -6,7 +6,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getPosts() {
-      const url = "http://foodwasteapi.marcusolrik.dk/posts/";
+      const url = "https://foodwasteapi.marcusolrik.dk/posts/";
       const response = await fetch(url);
       const responseData = await response.json();
       setPosts(responseData.data);
