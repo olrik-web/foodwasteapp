@@ -9,7 +9,7 @@ export default function UpdatePage() {
   const [user, setUser] = useState(
     JSON.parse(localStorage.getItem("authUser"))
   );
-  const url = `http://foodwasteapi.marcusolrik.dk/posts/?id=${params.postId}`;
+  const url = `https://greeneat.marcusolrik.dk/backend/posts/?id=${params.postId}`;
 
   useEffect(() => {
     async function getPost() {
@@ -43,8 +43,6 @@ export default function UpdatePage() {
       navigate("/");
     }
   }
-
-  let readonly = "true";
 
   if (user.id === post.uid) {
     return (

@@ -10,11 +10,6 @@ export default function ProfilePage({ setAuth }) {
   );
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  let image;
-  // User image varchar(255) + date("Ymd_His_") = 271
-  if (user.image != null && user.image.length < 280) {
-    image = require(`../assets/img/${user.image}`);
-  }
 
   function handleChange(event) {
     const name = event.target.name;
@@ -24,7 +19,7 @@ export default function ProfilePage({ setAuth }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const url = `http://foodwasteapi.marcusolrik.dk/users/?id=${user.id}`;
+    const url = `https://greeneat.marcusolrik.dk/backend/users/?id=${user.id}`;
     const userToUpdate = {
       id: user.id,
       name: user.name,
@@ -42,7 +37,6 @@ export default function ProfilePage({ setAuth }) {
     });
 
     const responseObject = await response.json();
-    console.log(responseObject);
 
     if (responseObject.status === "success") {
       localStorage.setItem("authUser", JSON.stringify(responseObject.data[0]));
@@ -82,7 +76,7 @@ export default function ProfilePage({ setAuth }) {
       setErrorMessage("The image file is too big!");
     }
   }
-
+  
   return (
     <section className="page">
       <Modal
@@ -165,12 +159,30 @@ export default function ProfilePage({ setAuth }) {
             accept="image/*"
             onChange={handleImageChange}
           />
-          <img
-            className="image-preview"
-            src={image || user.image || imgPlaceholder}
-            alt="Choose"
-            onError={(event) => (event.target.src = imgPlaceholder)}
-          />
+          {user.image != null && user.image.length < 280 ? (
+            <img
+              className="image-preview"
+              src={`/backend/images/${user.image}`}
+              alt="Choose"
+              onError={(event) => (event.target.src = imgPlaceholder)}
+            />
+          ) : user.image != null ? (
+            <img
+              className="image-preview"
+              src={user.image}
+              alt="Choose"
+              onError={(event) => (event.target.src = imgPlaceholder)}
+            />
+          ) : (
+            <img
+              className="image-preview"
+              src={imgPlaceholder}
+              alt="Choose"
+              onError={(event) => (event.target.src = imgPlaceholder)}
+            />
+          )}
+          {/* {user.image != null && user.image.length < 280 && ( */}
+          {/* )} */}
         </label>
         <p className="text-error">{errorMessage}</p>
         <button>Save User</button>

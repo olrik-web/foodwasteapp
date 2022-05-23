@@ -10,7 +10,7 @@ export default function SignInPage({ setAuth }) {
         const password = event.target.password.value; // password value from inout field in sign in form
         const loginObject = { mail: mail, password: password };
         const response = await fetch(
-          "http://foodwasteapi.marcusolrik.dk/auth/?action=login",
+          "https://greeneat.marcusolrik.dk/backend/auth/?action=login",
           {
             method: "POST",
             body: JSON.stringify(loginObject),

@@ -10,7 +10,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getFavorites() {
-      const url = `http://foodwasteapi.marcusolrik.dk/favorites?uid=${user.id}`;
+      const url = `https://greeneat.marcusolrik.dk/backend/favorites?uid=${user.id}`;
       const response = await fetch(url);
       const responseData = await response.json();
       setFavorites(responseData.data);
@@ -20,7 +20,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getPosts() {
-      const url = "http://foodwasteapi.marcusolrik.dk/posts/";
+      const url = "https://greeneat.marcusolrik.dk/backend/posts/";
       const response = await fetch(url);
       const responseData = await response.json();
       setPosts(responseData.data);

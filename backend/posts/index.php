@@ -30,7 +30,7 @@ if ($request_method === 'GET' && isset($_GET['id'])) {
         // Use the following savePath for localhost
         // $savePath = $_SERVER["DOCUMENT_ROOT"] . "/frontend/src/assets/img/";
         // Use this path for marcusolrik.dk Simply hosted website
-        $savePath = "/var/www/marcusolrik.dk/foodwaste/static/media/";
+        $savePath = "/var/www/marcusolrik.dk/greeneat/backend/images/";
         $fileName = date("Ymd_His_") . $newPost->title . ".jpg";
         $imageSave = imagejpeg($source, $savePath . $fileName);
         imagedestroy($source);

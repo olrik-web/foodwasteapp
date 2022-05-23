@@ -11,13 +11,12 @@ export default function SignUpPage({ setAuth }) {
         const mail = event.target.mail.value; // mail value from inout field in sign in form
         const password = event.target.password.value; // password value from inout field in sign in form
         const passwordCheck = event.target.passwordCheck.value; // password value from inout field in sign in form
-
         const name = event.target.name.value; // password value from inout field in sign in form
 
         const newUser = { mail: mail, password: password, passwordCheck: passwordCheck, name: name };
         console.log(newUser);
         const response = await fetch(
-          "http://foodwasteapi.marcusolrik.dk/auth/?action=signup",
+          "https://greeneat.marcusolrik.dk/backend/auth/?action=signup",
           {
             method: "POST",
             body: JSON.stringify(newUser),
@@ -25,7 +24,6 @@ export default function SignUpPage({ setAuth }) {
         );
 
         const data = await response.json();
-        console.log(data);
 
         if (data.error) {
             setErrorMessage(data.error);

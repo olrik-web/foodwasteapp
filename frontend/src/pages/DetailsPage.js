@@ -14,7 +14,7 @@ export default function UpdatePage() {
 
   const user = JSON.parse(localStorage.getItem("authUser"));
 
-  const url = `http://foodwasteapi.marcusolrik.dk/posts/?id=${params.postId}`;
+  const url = `https://greeneat.marcusolrik.dk/backend/posts/?id=${params.postId}`;
 
   useEffect(() => {
     async function getPost() {
@@ -43,7 +43,7 @@ export default function UpdatePage() {
         postid: post.id,
         amount: amount,
       };
-      const url = "http://foodwasteapi.marcusolrik.dk/orders/";
+      const url = "https://greeneat.marcusolrik.dk/backend/orders/";
       let response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(orderData),

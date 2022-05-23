@@ -6,9 +6,8 @@ export default function UserAvatar({ uid }) {
     name: "User's Name",
     street: "User's Street",
   });
-  const url = `http://foodwasteapi.marcusolrik.dk/users/?id=${uid}`;
+  const url = `https://greeneat.marcusolrik.dk/backend/users/?id=${uid}`;
 
-  let image = "";
   useEffect(() => {
     async function getUser() {
       const response = await fetch(url);
@@ -18,17 +17,24 @@ export default function UserAvatar({ uid }) {
     getUser();
   }, [url]);
 
-  if (user.image != null) {
-    image = require(`../assets/img/${user.image}`);
+  if (user != null) {
+    return (
+      <div className="avatar">
+        {user.image != null && (
+          <img
+            src={`/backend/images/${user.image}` || placeholder}
+            alt={user.id}
+          />
+        )}
+
+        <span>
+          <h3>{user.name}</h3>
+          <p>{user.street}</p>
+          <p>
+            {user.zipcode} {user.city}
+          </p>
+        </span>
+      </div>
+    );
   }
-  return (
-    <div className="avatar">
-      <img src={image || placeholder} alt={user.id} />
-      <span>
-        <h3>{user.name}</h3>
-        <p>{user.street}</p>
-        <p>{user.zipcode} {user.city}</p>
-      </span>
-    </div>
-  );
 }

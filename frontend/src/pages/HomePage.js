@@ -6,7 +6,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function getPosts() {
-      const url = "https://foodwasteapi.marcusolrik.dk/posts/";
+      const url = "https://greeneat.marcusolrik.dk/backend/posts/";
       const response = await fetch(url);
       const responseData = await response.json();
       setPosts(responseData.data);
@@ -20,34 +20,34 @@ export default function HomePage() {
     setValue(event.target.value);
   };
 
-  return (
-    <section className="page">
-      <label>
-        Category: &nbsp;
-        <select value={value} onChange={handleChange}  className="selectHome">
-          <option value="All">All</option>
-          <option value="Meals">Meals</option>
-          <option value="Bakery">Bakery</option>
-          <option value="Vegetables">Vegetables</option>
-          <option value="Dairy">Dairy</option>
-          <option value="Meat">Meat</option>
-        </select>
-        <br/>
-      </label>
-
-        <br/>
-
-      <section className="grid-container">
-        {posts.map((post) => {
-          if (value != "All") {
-            if (post.category === value) {
+  if (posts != null) {
+    return (
+      <section className="page">
+        <label>
+          Category: &nbsp;
+          <select value={value} onChange={handleChange} className="selectHome">
+            <option value="All">All</option>
+            <option value="Meals">Meals</option>
+            <option value="Bakery">Bakery</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Meat">Meat</option>
+          </select>
+          <br />
+        </label>
+        <br />
+        <section className="grid-container">
+          {posts.map((post) => {
+            if (value != "All") {
+              if (post.category === value) {
+                return <PostCard post={post} key={post.id} />;
+              }
+            } else {
               return <PostCard post={post} key={post.id} />;
             }
-          } else {
-            return <PostCard post={post} key={post.id} />;
-          }
-        })}
+          })}
+        </section>
       </section>
-    </section>
-  );
+    );
+  }
 }

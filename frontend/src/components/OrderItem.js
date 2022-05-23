@@ -18,7 +18,7 @@ export default function OrderItem({ order }) {
 
   useEffect(() => {
     async function getPost() {
-      const url = `http://foodwasteapi.marcusolrik.dk/posts?id=${order.postId}`;
+      const url = `https://greeneat.marcusolrik.dk/backend/posts?id=${order.postId}`;
       const response = await fetch(url);
       const responseData = await response.json();
       setPosts(responseData.data[0]);

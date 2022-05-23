@@ -27,7 +27,7 @@ export default function PostCard({ post }) {
 
   useEffect(() => {
     async function getFavorites() {
-      const url = `https://foodwasteapi.marcusolrik.dk/favorites?uid=${user.id}`;
+      const url = `https://greeneat.marcusolrik.dk/backend/favorites?uid=${user.id}`;
       const response = await fetch(url, {
         headers: {
           "Content-Type": "application/json; charset=utf-8",
@@ -46,7 +46,7 @@ export default function PostCard({ post }) {
       postid: post.id,
       uid: user.id,
     };
-    const url = "https://foodwasteapi.marcusolrik.dk/favorites/";
+    const url = "https://greeneat.marcusolrik.dk/backend/favorites/";
     await fetch(url, {
       method: "POST",
       headers: {
@@ -57,7 +57,7 @@ export default function PostCard({ post }) {
   }
 
   async function favoriteDelete(post) {
-    const url = `https://foodwasteapi.marcusolrik.dk/favorites?postid=${post.id}`;
+    const url = `https://greeneat.marcusolrik.dk/backend/favorites?postid=${post.id}`;
     await fetch(url, {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
@@ -77,72 +77,74 @@ export default function PostCard({ post }) {
     setFavorite((current) => !current);
   };
 
-  return (
-    <article onClick={handleClick}>
-      <div className="detailsContainer">
-        <div>
-          <UserAvatar uid={post.uid} />
-          <img src={require(`../assets/img/${post.image}`)} alt={post.title} />
-          <div className="priceQty">
-            {post.quantity > 4 ? (
-              <p id="quantity"> Quantity: {post.quantity}</p>
-            ) : post.quantity <= 4 && post.quantity > 0 ? (
-              <p
-                id="quantity"
-                style={{ color: "red", border: "2px solid red" }}
-              >
-                {" "}
-                Only {post.quantity} left{" "}
-              </p>
-            ) : (
-              <p
-                id="quantity"
-                style={{
-                  color: "white",
-                  background: "#808080",
-                  border: "2px solid #808080",
-                }}
-              >
-                {" "}
-                Sold out
-              </p>
-            )}
-            <p className="price">{post.price} DKK</p>
+  if (post != null) {
+    return (
+      <article onClick={handleClick}>
+        <div className="detailsContainer">
+          <div>
+            <UserAvatar uid={post.uid} />
+            <img src={`/backend/images/${post.image}`} alt={post.title} />
+            <div className="priceQty">
+              {post.quantity > 4 ? (
+                <p id="quantity"> Quantity: {post.quantity}</p>
+              ) : post.quantity <= 4 && post.quantity > 0 ? (
+                <p
+                  id="quantity"
+                  style={{ color: "red", border: "2px solid red" }}
+                >
+                  {" "}
+                  Only {post.quantity} left{" "}
+                </p>
+              ) : (
+                <p
+                  id="quantity"
+                  style={{
+                    color: "white",
+                    background: "#808080",
+                    border: "2px solid #808080",
+                  }}
+                >
+                  {" "}
+                  Sold out
+                </p>
+              )}
+              <p className="price">{post.price} DKK</p>
+            </div>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
           </div>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
+          <div className="buttonsLeft">
+            <button className="postButtons">Order now</button>
+            <a
+              onClick={(e) => {
+                e.stopPropagation();
+                buttonHandler(post);
+              }}
+              type="button"
+              className="postFavorite"
+            >
+              {isFavorite ? (
+                <FontAwesomeIcon icon={faHeartCircleCheck} />
+              ) : (
+                <FontAwesomeIcon icon={faHeart} />
+              )}
+            </a>
+          </div>
+          <div>
+            <p className="postDetailsLeft">
+              <FontAwesomeIcon icon={faTag} style={{ color: "#f5a33e" }} />{" "}
+              {post.category}
+            </p>
+            <p className="postDetailsRight">
+              <FontAwesomeIcon
+                icon={faBagShopping}
+                style={{ color: "#f5a33e" }}
+              />{" "}
+              {post.pickup_at}
+            </p>
+          </div>
         </div>
-        <div className="buttonsLeft">
-          <button className="postButtons">Order now</button>
-          <a
-            onClick={(e) => {
-              e.stopPropagation();
-              buttonHandler(post);
-            }}
-            type="button"
-            className="postFavorite"
-          >
-            {isFavorite ? (
-              <FontAwesomeIcon icon={faHeartCircleCheck} />
-            ) : (
-              <FontAwesomeIcon icon={faHeart} />
-            )}
-          </a>
-        </div>
-        <div>
-          <p className="postDetailsLeft">
-            <FontAwesomeIcon icon={faTag} style={{ color: "#f5a33e" }} />{" "}
-            {post.category}
-          </p>
-          <p className="postDetailsRight">
-            <FontAwesomeIcon
-              icon={faBagShopping}
-              style={{ color: "#f5a33e" }}
-            />{" "}
-            {post.pickup_at}
-          </p>
-        </div>
-      </div>
-    </article>
-  );
+      </article>
+    );
+  }
 }

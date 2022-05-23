@@ -14,7 +14,7 @@ export default function CreatePage() {
 
   async function createPost(newPost) {
     newPost.uid = user.id;
-    const url = "http://foodwasteapi.marcusolrik.dk/posts/";
+    const url = "https://greeneat.marcusolrik.dk/backend/posts/";
     let response = await fetch(url, {
       method: "POST",
       body: JSON.stringify(newPost),
