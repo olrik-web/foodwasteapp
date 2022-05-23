@@ -8,8 +8,12 @@ export default function MyPosts() {
   const params = useParams();
   useEffect(() => {
     async function getOrders() {
-      const url = `http://foodwasteapi.marcusolrik.dk/orders?buyerId=${params.buyerId}`;
-      const response = await fetch(url);
+      const url = `https://foodwasteapi.marcusolrik.dk/orders/?buyerId=${params.buyerId}`;
+      const response = await fetch(url, {
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        }
+      });
       const responseData = await response.json();
       setOrders(responseData.data);
     }

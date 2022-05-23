@@ -27,12 +27,10 @@ export default function PostCard({ post }) {
 
   useEffect(() => {
     async function getFavorites() {
-      const url = `http://foodwasteapi.marcusolrik.dk/favorites?uid=${user.id}`;
+      const url = `https://foodwasteapi.marcusolrik.dk/favorites?uid=${user.id}`;
       const response = await fetch(url, {
         headers: {
-          // "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-          // 'Content-Type': 'application/x-www-form-urlencoded',
+          "Content-Type": "application/json; charset=utf-8",
         },
       });
       const responseData = await response.json();
@@ -48,16 +46,22 @@ export default function PostCard({ post }) {
       postid: post.id,
       uid: user.id,
     };
-    const url = "http://foodwasteapi.marcusolrik.dk/favorites";
+    const url = "https://foodwasteapi.marcusolrik.dk/favorites/";
     await fetch(url, {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
       body: JSON.stringify(data),
     });
   }
 
   async function favoriteDelete(post) {
-    const url = `http://foodwasteapi.marcusolrik.dk/favorites?postid=${post.id}`;
+    const url = `https://foodwasteapi.marcusolrik.dk/favorites?postid=${post.id}`;
     await fetch(url, {
+      headers: {
+        "Content-Type": "application/json; charset=utf-8",
+      },
       method: "DELETE",
     });
   }
@@ -72,10 +76,6 @@ export default function PostCard({ post }) {
     }
     setFavorite((current) => !current);
   };
-  const value = process.env.PUBLIC_URL;
-  const value2 = process.env["PUBLIC_URL"];
-  // console.log(value);
-  // console.log(value2);
 
   return (
     <article onClick={handleClick}>
