@@ -6,19 +6,17 @@ export default function MyPosts() {
   const [orders, setOrders] = useState([]);
   const [user] = useState(JSON.parse(localStorage.getItem("authUser")));
   const params = useParams();
+
+  const url = `https://greeneat.marcusolrik.dk/backend/orders/?buyerId=${params.buyerId}`;
+
   useEffect(() => {
     async function getOrders() {
-      const url = `https://greeneat.marcusolrik.dk/backend/orders/?buyerId=${params.buyerId}`;
-      const response = await fetch(url, {
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-        }
-      });
+      const response = await fetch(url);
       const responseData = await response.json();
       setOrders(responseData.data);
     }
     getOrders();
-  }, []);
+  }, [url]);
 
   return (
     <section className="page">

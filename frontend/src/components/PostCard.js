@@ -26,21 +26,17 @@ export default function PostCard({ post }) {
     navigate(`../details/${post.id}`);
   }
 
+  const url = `https://greeneat.marcusolrik.dk/backend/favorites?uid=${user.id}`;
   useEffect(() => {
     async function getFavorites() {
-      const url = `https://greeneat.marcusolrik.dk/backend/favorites?uid=${user.id}`;
-      const response = await fetch(url, {
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-        },
-      });
+      const response = await fetch(url);
       const responseData = await response.json();
       setFavorites(responseData.data);
       const result = responseData.data.find((item) => item.postid === post.id);
       setFavorite(result ? true : false);
     }
     getFavorites();
-  }, []);
+  }, [url]);
 
   async function favoriteAdd(post) {
     const data = {
@@ -50,9 +46,6 @@ export default function PostCard({ post }) {
     const url = "https://greeneat.marcusolrik.dk/backend/favorites/";
     await fetch(url, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
       body: JSON.stringify(data),
     });
   }
@@ -60,9 +53,6 @@ export default function PostCard({ post }) {
   async function favoriteDelete(post) {
     const url = `https://greeneat.marcusolrik.dk/backend/favorites?postid=${post.id}`;
     await fetch(url, {
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-      },
       method: "DELETE",
     });
   }

@@ -16,15 +16,16 @@ export default function OrderItem({ order }) {
   );
   const [post, setPosts] = useState([]);
 
+  const url = `https://greeneat.marcusolrik.dk/backend/posts?id=${order.postId}`;
+
   useEffect(() => {
     async function getPost() {
-      const url = `https://greeneat.marcusolrik.dk/backend/posts?id=${order.postId}`;
       const response = await fetch(url);
       const responseData = await response.json();
       setPosts(responseData.data[0]);
     }
     getPost();
-  }, []);
+  }, [url]);
   /**
    * handleClick is called when user clicks on the Article (PostCard)
    */
@@ -39,7 +40,7 @@ export default function OrderItem({ order }) {
             <UserAvatar uid={post.uid} />
             <h2>{post.title}</h2>
             <p>{post.body}</p>
-            <hr/>
+            <hr />
             <p>Amount: {order.amount}</p>
             <p>Pickup time: {post.pickup_at}</p>
             <p>Order date: {order.created_at}</p>
@@ -47,5 +48,5 @@ export default function OrderItem({ order }) {
         </div>
       </article>
     );
-  } 
+  }
 }
