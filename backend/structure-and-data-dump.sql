@@ -102,8 +102,8 @@ VALUES
     (
         1,
         '2022-04-28 13:49:29',
-        'Lykkepose',
-        'Red en lykkepose med blandet bagværk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 21:30:00',
         4,
         100,
@@ -113,30 +113,30 @@ VALUES
     ),(
         14,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede mælkeprodukter fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         45,
         'Dairy.jpg',
         'Dairy',
-        '1'
+        '8'
     ),(
         15,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet mad fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 14:30:00',
         3,
         89,
         'Meals.jpg',
         'Meals',
-        '2'
+        '10'
     ),(
         16,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede grøntsager fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 15:30:00',
         6,
         89,
@@ -146,8 +146,8 @@ VALUES
     ),(
         17,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet kød/fisk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 19:30:00',
         20,
         89,
@@ -157,8 +157,8 @@ VALUES
     ),(
         18,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet bagværk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -168,8 +168,8 @@ VALUES
     ),(
         19,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet bagværk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -179,8 +179,8 @@ VALUES
     ),(
         20,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede grøntsager fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -190,8 +190,8 @@ VALUES
     ),(
         21,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet mad fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -201,8 +201,8 @@ VALUES
     ),(
         22,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet mad fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -212,8 +212,8 @@ VALUES
     ),(
         23,
         '2022-04-28 15:20:39 ',
-        'Lykkepose',
-        'Red en lykkepose med blandede grøntsager fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -223,8 +223,8 @@ VALUES
     ),(
         24,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet bagværk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -234,8 +234,8 @@ VALUES
     ),(
         25,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede mælkeprodukter fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -245,8 +245,8 @@ VALUES
     ),(
         26,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede mælkeprodukter fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -256,8 +256,8 @@ VALUES
     ),(
         28,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet kød/fisk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -267,8 +267,8 @@ VALUES
     ),(
         29,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet kød/fisk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -278,8 +278,8 @@ VALUES
     ),(
         30,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet mad fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -289,8 +289,8 @@ VALUES
     ),(
         31,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet mad fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -300,8 +300,8 @@ VALUES
     ),(
         32,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet mad fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -311,8 +311,8 @@ VALUES
     ),(
         33,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet bagværk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -322,8 +322,8 @@ VALUES
     ),(
         34,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet kød/fisk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -333,8 +333,8 @@ VALUES
     ),(
         35,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede grøntsager fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -344,8 +344,8 @@ VALUES
     ),(
         36,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet bagværk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -355,8 +355,8 @@ VALUES
     ),(
         37,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede mælkeprodukter fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -366,19 +366,19 @@ VALUES
     ),(
         38,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede grøntsager fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
         'Vegetables.jpg',
         'Vegetables',
-        '2'
+        '5'
     ),(
         39,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede mælkeprodukter fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -388,8 +388,8 @@ VALUES
     ),(
         40,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet mad fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -399,8 +399,8 @@ VALUES
     ),(
         41,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede grøntsager fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -410,8 +410,8 @@ VALUES
     ),(
         42,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandet bagværk fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -421,8 +421,8 @@ VALUES
     ),(
         43,
         '2022-04-28 15:20:39',
-        'Lykkepose',
-        'Red en lykkepose med blandede mælkeprodukter fra dagen. Husk at posens indhold vil variere dag for dag, så lad indholdet overraske dig.',
+        'Bag',
+        'Save a bag with mixed goods from the day. Remember that the contents of the bag will vary from day to day, so let the contents surprise you.',
         '2022-04-29 20:30:00',
         2,
         89,
@@ -503,7 +503,7 @@ INSERT INTO
 VALUES
     (
         1,
-        'img-placeholder.jpg',
+        'circlek.png',
         NULL,
         'aarhusc@circlek.dk',
         'Circle K - Aarhus C',
@@ -515,7 +515,7 @@ VALUES
         'Aarhus C'
     ),(
         2,
-        'img-placeholder.jpg',
+        'circlek.png', 
         NULL,
         'aarhusn@circlek.dk',
         'Circle K - Aarhus N',
@@ -527,7 +527,7 @@ VALUES
         'Aarhus N'
     ),(
         3,
-        'img-placeholder.jpg',
+        'circlek.png',
         'Senior Lecturer',
         'brabrand@circlek.dk',
         'Circle K - Brabrand',
@@ -539,7 +539,7 @@ VALUES
         'Brabrand'
     ),(
         4,
-        'img-placeholder.jpg',
+        'q8.jpg',
         NULL,
         'q8aarhusn@q8.dk',
         'Q8 - Randersvej',
@@ -551,7 +551,7 @@ VALUES
         'Aarhus N'
     ),(
         5,
-        'img-placeholder.jpg',
+        'aldi.png',
         NULL,
         'aldiaarhusc@aldi.dk',
         'Aldi - Grønnegade',
@@ -563,7 +563,7 @@ VALUES
         'Aarhus C'
     ),(
         6,
-        'img-placeholder.jpg',
+        'føtex.png',
         NULL,
         'føtexguldsmedgade@føtex.dk',
         'føtex Food - Guldsmedgade',
@@ -575,7 +575,7 @@ VALUES
         'Aarhus C'
     ),(
         7,
-        'img-placeholder.jpg',
+        'lagkagehuset.jpg',
         NULL,
         'lagkagehusetmagasin@lagkagehuset.dk',
         'Lagkagehuset - Magasin',
@@ -587,7 +587,7 @@ VALUES
         'Aarhus C'
     ),(
         8,
-        'img-placeholder.jpg',
+        'starbucks.png',
         NULL,
         'starbucksborgporten@starbucks.dk',
         'Starbucks - Borgporten',
@@ -599,7 +599,7 @@ VALUES
         "Aarhus C"
     ),(
         9,
-        'img-placeholder.jpg',
+        'espressohouse.png',
         NULL,
         'espressofrederiksgade@espressohouse.dk',
         'Espresso House - Frederiksgade',
@@ -611,7 +611,7 @@ VALUES
         "Aarhus C"
     ),(
         10,
-        'img-placeholder.jpg',
+        '7eleven.png',
         NULL,
         '7elevennørreport@7eleven.dk',
         '7-Eleven - Nørreport',
@@ -623,7 +623,7 @@ VALUES
         "Aarhus C"
     ),(
         11,
-        'img-placeholder.jpg',
+        'sushimania.png',
         NULL,
         'sushimaniabruuns@sushimania.dk',
         'SushiMania - Bruuns Galleri',
@@ -635,7 +635,7 @@ VALUES
         "Aarhus C"
     ),(
         12,
-        'img-placeholder.jpg',
+        'flammen.png',
         NULL,
         'flammenaarhus@flammen.dk',
         'Restaurant Flammen - Aarhus',
