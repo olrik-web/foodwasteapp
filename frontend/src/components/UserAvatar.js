@@ -18,10 +18,15 @@ export default function UserAvatar({ uid }) {
     getUser();
   }, [url]);
 
-  if (user.image != null) {
+  if (user!= null && user.image != null) {
     image = require(`../assets/img/${user.image}`);
   }
-  return (
+  
+  console.log(user);
+
+  if(user!=null){
+
+    return (
     <div className="avatar">
       <img src={image || placeholder} alt={user.id} />
       <span>
@@ -31,4 +36,7 @@ export default function UserAvatar({ uid }) {
       </span>
     </div>
   );
+
+  }
+  
 }

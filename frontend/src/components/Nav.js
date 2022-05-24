@@ -7,14 +7,41 @@ import {
   faHome,
   faList,
   faUser,
-  faBasketShopping
+  faBasketShopping,
+  faTimes,
+  faBars
 } from "@fortawesome/free-solid-svg-icons";
+
+import logo from "../assets/img/greenEat-logo.png";
+
+
 
 export default function Nav() {
   const [user] = useState(JSON.parse(localStorage.getItem("authUser")));
+
+  const [clicked,setClicked] = useState(false);
+
+  function handleClick(){
+    setClicked(!clicked);
+  }
   
     return (
       <nav className="nav">
+
+        <div className="logoSection">
+
+          <img src={logo} alt="logo" style={{height:"70px" , width:"100px"}} className="logoImg"/>
+
+        </div>
+
+        <div className="burgerBar" onClick={handleClick}>
+          {clicked ? (
+            <FontAwesomeIcon icon={faTimes}/>
+          ): (<FontAwesomeIcon icon={faBars}/>)}
+        </div>
+
+        <div className={clicked ? "nav-menu menuActive" : "nav-menu"}>
+
         <NavLink to="/">
           <FontAwesomeIcon icon={faHome} /> <p>Home</p>
         </NavLink>
@@ -37,6 +64,7 @@ export default function Nav() {
         <NavLink to={`/orders/${user.id}`}>
           <FontAwesomeIcon icon={faBasketShopping} /> <p>Orders</p>
         </NavLink>
+        </div>
       </nav>
     );
   }
