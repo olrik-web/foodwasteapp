@@ -3,11 +3,13 @@ import {
   faBagShopping,
   faHeartCircleCheck,
   faTag,
+  faWalking,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import UserAvatar from "./UserAvatar";
+
 
 export default function PostCard({ post }) {
   const navigate = useNavigate();
@@ -127,7 +129,7 @@ export default function PostCard({ post }) {
           </p>
           <p className="postDetailsRight">
             <FontAwesomeIcon
-              icon={faBagShopping}
+              icon={faWalking}
               style={{ color: "#f5a33e" }}
             />{" "}
             {post.pickup_at}
