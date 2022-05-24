@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import UserAvatar from "../components/UserAvatar";
 import Modal from "../components/Modal";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faSquareMinus, faSquarePlus } from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHeart,
+  faSquareMinus,
+  faSquarePlus,
+} from "@fortawesome/free-regular-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import background from "../assets/img/foodwasteapppic.jpg";
-
+import placeHolder from "../assets/img/img-placeholder.jpg";
 
 export default function UpdatePage() {
   const [post, setPost] = useState([]);
@@ -16,7 +20,7 @@ export default function UpdatePage() {
   const [show, setShow] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [modalBody, setModalBody] = useState("");
-  const [seller,setSeller] = useState([]);
+  const [seller, setSeller] = useState([]);
 
   const user = JSON.parse(localStorage.getItem("authUser"));
 
@@ -27,24 +31,18 @@ export default function UpdatePage() {
       const response = await fetch(url);
       const responseData = await response.json();
 
-      console.log(responseData);
+      setPost(responseData.data[0]);
 
-      setPost(responseData.data[0]);  
-      
       const userId = responseData.data[0].uid;
-      const res = await fetch(`http://localhost:3000/backend/users/?id=${userId}`);
+      const res = await fetch(
+        `https://greeneat.marcusolrik.dk/backend/users/?id=${userId}`
+      );
       const dataResponse = await res.json();
 
-
       setSeller(dataResponse.data[0]);
-      
     }
     getPost();
   }, [url]);
-
-
-
-  
 
   function handleClick() {
     navigate(`/update/${post.id}`);
@@ -68,13 +66,12 @@ export default function UpdatePage() {
         method: "POST",
         body: JSON.stringify(orderData),
       });
-      navigate(`/orders/${user.id}`);
+      if (response.ok) {
+        setModalTitle("Thank you");
+        setModalBody("Your order has been received.");
+        setShow(true);
+      }
     }
-  }
-
-  let image = "";
-  if (post.image != null) {
-    image = require(`../assets/img/${post.image}`);
   }
 
   if (!post.uid) {
@@ -87,13 +84,20 @@ export default function UpdatePage() {
         title={modalTitle}
         onClose={() => {
           setShow(false);
+          if (modalTitle == "Thank you") {
+            navigate(`/orders/${user.id}`);
+          }
         }}
         show={show}
       >
         <p>{modalBody}</p>
       </Modal>
       <div className="detailsImg">
-        <img className="detailsImage" src={image} alt={post.title} />
+        <img
+          className="detailsImage"
+          src={`/backend/images/${post.image}` || placeHolder}
+          alt={post.title}
+        />
       </div>
       <div className="detailsPage">
         <br />
@@ -113,42 +117,48 @@ export default function UpdatePage() {
 
         </div>  */}
 
-
         <div className="detailsContent">
           <div className="leftContent">
-
-            <h1>Informations</h1>
+            <h1>Information</h1>
 
             <div className="infoListItems">
-              <p><strong>Price:</strong> {post.price}</p>
-               {/* <strong id="itemOne">Price:</strong>
+              <p>
+                <strong>Price:</strong> {post.price}
+              </p>
+              {/* <strong id="itemOne">Price:</strong>
               <p id="itemTwo">{post.price}</p> */}
-            {post.quantity > 4 ? (
-            <p> <strong>Quantity:</strong> {post.quantity}</p>
-          ) : post.quantity <= 4 && post.quantity > 0 ? (
-            <p>
-              {" "}
-              <strong>Quantity:</strong> Only {post.quantity} left{" "}
-            </p>
-          ) : (
-            <p
-            >
-              {" "}
-              Sold out
-            </p>
-          )}
+              {post.quantity > 4 ? (
+                <p>
+                  {" "}
+                  <strong>Quantity:</strong> {post.quantity}
+                </p>
+              ) : post.quantity <= 4 && post.quantity > 0 ? (
+                <p>
+                  {" "}
+                  <strong>Quantity:</strong> Only {post.quantity} left{" "}
+                </p>
+              ) : (
+                <p> Sold out</p>
+              )}
 
-          <p><strong>Pickup at:</strong> {post.pickup_at}</p>
-          <p><strong>Adress:</strong> {seller.street} {seller.zipcode} {seller.city}</p>
+              <p>
+                <strong>Pickup at:</strong> {post.pickup_at}
+              </p>
+              <p>
+                <strong>Adress:</strong> {seller.street} {seller.zipcode}{" "}
+                {seller.city}
+              </p>
             </div>
-
           </div>
-          <div className="rightContent" style={{backgroundImage:`url(${background})` }} >
+          <div
+            className="rightContent"
+            style={{ backgroundImage: `url(${background})` }}
+          >
             <h1 className="text-center">{post.title}</h1>
-        <p className="detailPostBody">{post.body}</p>
+            <p className="detailPostBody">{post.body}</p>
           </div>
         </div>
-      
+
         <div className="priceQty">
           {post.quantity > 4 ? (
             <p id="quantity"> quantity {post.quantity}</p>
@@ -172,7 +182,7 @@ export default function UpdatePage() {
           )}
           <p className="price">{post.price} DKK</p>
         </div>
-         
+
         <div className="buySection">
           <div className="buyButtons">
             <button
@@ -180,9 +190,12 @@ export default function UpdatePage() {
               onClick={() => {
                 if (amount > 1) setAmount(amount - 1);
               }}
-              style={{ width: "90px" , marginLeft:"120px"}}
+              style={{ width: "90px", marginLeft: "120px" }}
             >
-              <FontAwesomeIcon icon={faSquareMinus} style={{fontSize:"15px"}}/>
+              <FontAwesomeIcon
+                icon={faSquareMinus}
+                style={{ fontSize: "15px" }}
+              />
             </button>
             &nbsp;
             <p className="postButtons" id="amountSection">
@@ -192,9 +205,12 @@ export default function UpdatePage() {
             <button
               className="postButtons"
               onClick={() => setAmount(amount + 1)}
-              style={{ width: "90px" , fontWeight:"900"}}
+              style={{ width: "90px", fontWeight: "900" }}
             >
-              <FontAwesomeIcon icon={faSquarePlus} style={{fontSize:"15px"}}/>
+              <FontAwesomeIcon
+                icon={faSquarePlus}
+                style={{ fontSize: "15px" }}
+              />
             </button>
           </div>
           <button className="orderButton" onClick={createOrder}>
@@ -203,7 +219,9 @@ export default function UpdatePage() {
         </div>
 
         {user.admin === "1" && user.id === post.uid && (
-          <button onClick={handleClick} style={{width:"216px"}}>Edit/delete post</button>
+          <button onClick={handleClick} style={{ width: "216px" }}>
+            Edit/delete post
+          </button>
         )}
       </div>
     </section>

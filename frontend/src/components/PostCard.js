@@ -10,7 +10,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import UserAvatar from "./UserAvatar";
 
-
 export default function PostCard({ post }) {
   const navigate = useNavigate();
   const [user, setUser] = useState(
@@ -145,38 +144,6 @@ export default function PostCard({ post }) {
               {post.pickup_at}
             </p>
           </div>
-          <h2>{post.title}</h2>
-          <p>{post.body}</p>
-        </div>
-        <div className="buttonsLeft">
-          <button className="postButtons">Order now</button>
-          <a
-            onClick={(e) => {
-              e.stopPropagation();
-              buttonHandler(post);
-            }}
-            type="button"
-            className="postFavorite"
-          >
-            {isFavorite ? (
-              <FontAwesomeIcon icon={faHeartCircleCheck} />
-            ) : (
-              <FontAwesomeIcon icon={faHeart} />
-            )}
-          </a>
-        </div>
-        <div>
-          <p className="postDetailsLeft">
-            <FontAwesomeIcon icon={faTag} style={{ color: "#f5a33e" }} />{" "}
-            {post.category}
-          </p>
-          <p className="postDetailsRight">
-            <FontAwesomeIcon
-              icon={faWalking}
-              style={{ color: "#f5a33e" }}
-            />{" "}
-            {post.pickup_at}
-          </p>
         </div>
       </article>
     );
