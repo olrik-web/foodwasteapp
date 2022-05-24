@@ -5,7 +5,6 @@
   --light-grey: #f1f1f4;
   --text-color-light: #f1f1f1;
   --text-color-dark: #333;
-  --text-color-danger: rgb(152, 58, 58);
   --white: #f1f1f1;
 }
 
@@ -13,48 +12,66 @@ body {
   color: var(--text-color-dark);
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "poppins", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-top: 20px;
+ 
+}
+
+
+
+.logoImg {
+  float: left;
+  position: absolute;
+  margin-top: 7px;
+  left: 17px;
+}
+
+.logoSection{
+  margin-right: 250px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "poppins" , sans-serif
 }
 
 main {
   padding: 58px 0 0;
   background-color: var(--light-green);
+  font-family: "poppins", sans-serif
 }
 
 h1 {
   font-size: 2em;
   font-weight: 500;
   letter-spacing: 0.1px;
+  font-family: "poppins", sans-serif
 }
 
 h2 {
   font-weight: 500;
   letter-spacing: 0.1px;
+  font-family: "poppins", sans-serif
 }
 
 h3 {
   font-weight: 500;
   letter-spacing: 0.1px;
+  font-family: "poppins", sans-serif
 }
 
 a {
   color: var(--green);
+  font-family: "poppins", sans-serif
 }
 
 .page {
   background-color: var(--light-green);
   min-height: calc(100vh - 58px - 2em);
   padding: 1em;
+  margin-top: 35px;
 }
 
 .text-center {
@@ -99,6 +116,7 @@ nav {
   right: 0;
   text-align: center;
   z-index: 1;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
 }
 
 /* Style the links inside the navigation bar */
@@ -107,9 +125,11 @@ nav a {
   color: var(--text-color-light);
   text-align: center;
   padding: 9px 16px;
+  margin-top: 0;
   text-decoration: none;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
 }
 
 nav a svg {
@@ -119,6 +139,7 @@ nav a svg {
 nav a p {
   color: white;
   font-size: 10px;
+  font-family: "poppins", sans-serif
 }
 
 /* Change the color of links on hover */
@@ -195,6 +216,7 @@ button {
   font-size: 0.8em;
   display: block;
   margin: 0.6em auto 0;
+  font-family: "poppins", sans-serif
 }
 
 button.btn-outline {
@@ -289,6 +311,7 @@ form .file-input {
 .avatar h3,
 .avatar p {
   margin: 0;
+  font-family: "poppins", sans-serif
 }
 
 article .avatar img {
@@ -342,7 +365,7 @@ article .avatar img {
 }
 
 .buySection {
-  justify-content: center;
+  /* justify-content: center; */
   text-align: center;
 }
 
@@ -350,11 +373,11 @@ article .avatar img {
   display: inline;
   width: 130px;
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 
 .orderButton {
-  width: 199px;
+  width: 216px;
 }
 
 #amountSection {
@@ -364,6 +387,7 @@ article .avatar img {
 .buttonsLeft a {
   font-size: 28px;
   float: right;
+  font-family: "poppins", sans-serif
 }
 
 .selectPost {
@@ -384,6 +408,13 @@ article .avatar img {
   border: solid 2px var(--green);
 }
 
+.priceQty {
+  margin-top: auto;
+  justify-content: space-between;
+  padding: 10px 0 10px 0;
+  width: 100%;
+}
+
 #quantity {
   border-radius: 5%;
   border: 2px solid var(--green);
@@ -395,13 +426,6 @@ article .avatar img {
   padding: 8px 8px;
   margin-top: 0px;
   margin-bottom: 0;
-}
-
-.priceQty {
-  margin-top: auto;
-  justify-content: space-between;
-  padding: 10px 0 10px 0;
-  width: 100%;
 }
 
 .price {
@@ -416,18 +440,6 @@ article .avatar img {
   background-color: var(--green);
   border-radius: 5%;
   white-space: nowrap;
-}
-
-@media (min-width: 650px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 992px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 }
 
 /* MODAL */
@@ -472,3 +484,210 @@ article .avatar img {
 .postDetailsRight {
   float: right;
 }
+
+.detailsContent{
+
+    margin-top: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  
+   
+    
+    
+    
+}
+
+.leftContent{
+
+    border-radius: 10px;
+    display: inline-block;
+    width: 30%;
+    min-height: 400px;
+    text-align: center;
+    margin-right: 10px;
+    background-color: var(--light-grey);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    
+
+}
+
+.leftContent h1{
+  text-decoration: underline;
+}
+
+.rightContent{
+
+
+    text-align: center;
+    display: inline;
+    min-height: 400px;
+    width: 100%;
+    color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+
+}
+
+.infoListItems{
+margin-top: auto;
+  padding: 10px 0 10px 0;
+  width: 70%;
+  margin-left: 45px;
+  text-align: left;
+  
+
+}
+
+#itemOne{
+border-radius: 5%;
+ 
+  color: var(--green);
+  font-weight: 500;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  float: left;
+  justify-content: space-around;
+  
+}
+
+#itemTwo{
+  font-weight: 500;
+  /* border: 1px solid var(--green); */
+ float: right;
+    margin-top: 0px;
+    width: 100px;
+    text-align: center;
+    color: black;
+    border-radius: 5%;
+    white-space: nowrap;
+}
+
+.burgerBar{
+  display: none;
+}
+
+@media (min-width: 650px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detailsContent {
+      display: flex;
+      flex-direction: column-reverse;
+  
+  }
+    
+  .rightContent {
+           margin-left: 0px;
+           margin-bottom: 10px;
+           
+  }
+
+     .leftContent {
+       width: 100%;
+     }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .detailsContent{
+    grid-template-columns: 1fr 2fr;
+    display: flex;
+    flex-direction: row;
+  }
+
+    .rightContent {
+      margin-left: 10px;
+      margin-bottom: 0px;
+    }
+
+    .leftContent {
+      width: 60%;
+    }
+
+  
+  }
+
+
+    @media (max-width: 649px) {
+  
+      .detailsContent {
+        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+
+      .leftContent{
+        width: 100%;
+      }
+  
+      .rightContent {
+        margin-left: 0px;
+        margin-bottom: 10px;
+      }
+  
+  
+    }
+
+
+    @media (max-width:766px){
+
+      .burgerBar{
+        position:absolute;
+        top:30px;
+        right: 10px;
+        display: block;
+        font-size: 25px;
+        color: white;
+      }
+
+      .nav-menu{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        background-color: #fdaf28;
+        position: absolute;
+        height: 580px;
+        width: 100%;
+        left: -100%;
+        transition: all 0.5s ease;
+
+        
+      }
+
+      .nav-menu.menuActive{
+        
+        left: 0px;
+        transition: all 0.5s ease;
+       
+      }
+
+      nav a svg {
+       margin-top: 10px;
+      }
+
+
+      nav{
+        width: 100%;
+        height: 100px;
+      }
+
+            .logoImg {
+              margin-top: 15px;
+            }
+      
+
+      
+
+    }
+
+
+
+

@@ -31,7 +31,7 @@ export default function OrderItem({ order }) {
   function handleClick() {
     navigate(`../details/${post.id}`);
   }
-  if (post.uid != null) {
+  if (post != null) {
     return (
       <article onClick={handleClick}>
         <div className="detailsContainer">

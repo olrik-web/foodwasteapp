@@ -17,6 +17,7 @@ export default function UserAvatar({ uid }) {
     getUser();
   }, [url]);
 
+<<<<<<< HEAD
   if (user != null) {
     return (
       <div className="avatar">
@@ -37,4 +38,27 @@ export default function UserAvatar({ uid }) {
       </div>
     );
   }
+=======
+  if (user!= null && user.image != null) {
+    image = require(`../assets/img/${user.image}`);
+  }
+  
+  console.log(user);
+
+  if(user!=null){
+
+    return (
+    <div className="avatar">
+      <img src={image || placeholder} alt={user.id} />
+      <span>
+        <h3>{user.name}</h3>
+        <p>{user.street}</p>
+        <p>{user.zipcode} {user.city}</p>
+      </span>
+    </div>
+  );
+
+  }
+  
+>>>>>>> master
 }
