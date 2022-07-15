@@ -30,7 +30,7 @@ export default function PostCard({ post }) {
 
   useEffect(() => {
     async function getFavorites() {
-      const url = `http://localhost:3000/backend/favorites?uid=${user.id}`;
+      const url = `https://www.pardesyar.dk/greenEat/backend/favorites?uid=${user.id} `;
       const response = await fetch(url);
       const responseData = await response.json();
       setFavorites(responseData.data);
@@ -45,7 +45,7 @@ export default function PostCard({ post }) {
       postid: post.id,
       uid: user.id,
     };
-    const url = "http://localhost:3000/backend/favorites";
+    const url = "https://www.pardesyar.dk/greenEat/backend/favorites/";
     await fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
@@ -53,7 +53,7 @@ export default function PostCard({ post }) {
   }
 
   async function favoriteDelete(post) {
-    const url = `http://localhost:3000/backend/favorites?postid=${post.id}`;
+    const url = `https://www.pardesyar.dk/greenEat/backend/favorites?postid=${post.id}`;
     await fetch(url, {
       method: "DELETE",
     });

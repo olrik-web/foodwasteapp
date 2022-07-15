@@ -17,7 +17,7 @@ export default function SignUpPage({ setAuth }) {
         const newUser = { mail: mail, password: password, passwordCheck: passwordCheck, name: name };
         console.log(newUser);
         const response = await fetch(
-          "http://localhost:3000/backend/auth/?action=signup",
+          "https://www.pardesyar.dk/greenEat/backend/auth/?action=signup",
           {
             method: "POST",
             body: JSON.stringify(newUser),

@@ -1,5 +1,8 @@
 {
-    "name": "react-post-app-php-json-api",
+    "name": "pardesyar",
+    "homepage": "https://pardesyar.dk/greenEat/",
+
+
     "version": "0.1.0",
     "private": true,
     "dependencies": {

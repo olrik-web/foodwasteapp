@@ -18,7 +18,7 @@ export default function OrderItem({ order }) {
 
   useEffect(() => {
     async function getPost() {
-      const url = `http://localhost:3000/backend/posts?id=${order.postId}`;
+      const url = `https://www.pardesyar.dk/greenEat/backend/posts?id=${order.postId}`;
       const response = await fetch(url);
       const responseData = await response.json();
       setPosts(responseData.data[0]);

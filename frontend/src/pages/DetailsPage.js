@@ -20,7 +20,7 @@ export default function UpdatePage() {
 
   const user = JSON.parse(localStorage.getItem("authUser"));
 
-  const url = `http://localhost:3000/backend/posts/?id=${params.postId}`;
+  const url = `https://www.pardesyar.dk/greenEat/backend/posts/?id=${params.postId}`;
 
   useEffect(() => {
     async function getPost() {
@@ -32,7 +32,7 @@ export default function UpdatePage() {
       setPost(responseData.data[0]);  
       
       const userId = responseData.data[0].uid;
-      const res = await fetch(`http://localhost:3000/backend/users/?id=${userId}`);
+      const res = await fetch(`https://www.pardesyar.dk/greenEat/backend/users/?id=${userId}`);
       const dataResponse = await res.json();
 
 
@@ -63,7 +63,7 @@ export default function UpdatePage() {
         postid: post.id,
         amount: amount,
       };
-      const url = "http://localhost:3000/backend/orders/";
+      const url = "https://www.pardesyar.dk/greenEat/backend/orders/";
       let response = await fetch(url, {
         method: "POST",
         body: JSON.stringify(orderData),

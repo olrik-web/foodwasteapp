@@ -650,7 +650,7 @@ VALUES
         "admin@admin.dk",
         "Admin",
         null,
-        '$2y$10$a2hYiZyslZVEjhCn5WUl2./DkvJxureeR64pepdLKADq4JCdM1bzu',
+        'adminadmin123',
         1,
         NULL,
         NULL,

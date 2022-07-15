@@ -24,7 +24,7 @@ export default function ProfilePage({ setAuth }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    const url = `http://localhost:3000/backend/users/?id=${user.id}`;
+    const url = `https://www.pardesyar.dk/greenEat/backend/users/?id=${user.id}`;
     const userToUpdate = {
       id: user.id,
       name: user.name,
